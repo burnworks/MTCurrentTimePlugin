@@ -1,0 +1,10 @@
+plugin:
+  id: CurrentTimePlugin
+  name: Current Time Plugin
+  version: 1.0.0
+  author_name: burnworks
+  author_link: https://github.com/burnworks
+  description: 記事編集画面に現在日時を反映させるボタンを追加します
+
+callbacks:
+  MT::App::CMS::template_param.edit_entry: "CurrentTimePlugin::edit_entry_param"

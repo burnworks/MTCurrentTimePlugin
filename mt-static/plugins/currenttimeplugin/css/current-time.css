@@ -1,0 +1,27 @@
+.current-time-btn {
+  display: block;
+  width: max-content;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #6c757d;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.current-time-btn:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+.current-time-btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
+}
