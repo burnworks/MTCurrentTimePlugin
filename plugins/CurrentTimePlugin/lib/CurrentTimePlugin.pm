@@ -5,7 +5,8 @@ use warnings;
 sub edit_entry_param {
     my ($cb, $app, $param) = @_;
 
-    return unless $app->mode  eq 'view';
+    my $mode = $app->mode || '';
+    return unless $mode eq 'view' || $mode eq 'edit';
     return unless $app->param('_type') eq 'entry';
 
     my $static_base = $app->static_path;
