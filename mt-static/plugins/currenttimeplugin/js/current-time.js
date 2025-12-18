@@ -6,8 +6,10 @@
         // 日付フィールドが入っているコンテナ
         var $container = $('#authored_on-field .data-time-fields');
         if (!$container.length) return;
+        // 既にボタンがある場合はスキップ（念のための2重挿入防止）
+        if ($container.find('.current-time-btn').length) return;
 
-        // ボタンを作って挿入
+        // ボタンを挿入
         var $btn = $('<button type="button" class="current-time-btn">現在日時を反映</button>');
         $container.append($btn);
 
