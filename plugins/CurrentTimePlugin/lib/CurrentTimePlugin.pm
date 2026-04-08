@@ -6,7 +6,7 @@ sub edit_entry_param {
     my ($cb, $app, $param) = @_;
 
     my $mode = $app->mode || '';
-    return unless $mode eq 'edit';
+    return unless $mode eq 'view' || $mode eq 'edit';
     my $type = $app->param('_type') // '';
     return unless $type eq 'entry' || $type eq 'page';
 
