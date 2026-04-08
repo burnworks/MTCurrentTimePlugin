@@ -39,6 +39,7 @@
 
 - Movable Type 7
 - Movable Type 8
+- Movable Type 9
 
 ## ライセンス
 
