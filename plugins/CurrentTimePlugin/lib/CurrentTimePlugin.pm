@@ -6,8 +6,9 @@ sub edit_entry_param {
     my ($cb, $app, $param) = @_;
 
     my $mode = $app->mode || '';
-    return unless $mode eq 'view' || $mode eq 'edit';
-    return unless $app->param('_type') eq 'entry';
+    return unless $mode eq 'edit';
+    my $type = $app->param('_type') // '';
+    return unless $type eq 'entry' || $type eq 'page';
 
     my $static_base = $app->static_path;
     my $plugin      = $cb->plugin   or return; 
@@ -21,6 +22,7 @@ sub edit_entry_param {
 <!-- /CurrentTimePlugin Assets -->
 HTML
 
+    $param->{html_head} //= '';
     $param->{html_head} .= $html;
 
     ##  デバッグログ
